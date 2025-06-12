@@ -21,8 +21,9 @@ broadcast/
 
 lib/
 lib/**
-lib
 
 todo
 plan
+
+Layout.sol
 
