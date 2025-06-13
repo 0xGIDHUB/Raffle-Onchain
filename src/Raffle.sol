@@ -13,7 +13,7 @@ import {VRFV2PlusClient} from "@chainlink/contracts/src/v0.8/vrf/dev/libraries/V
  * @dev Subsription ID is set to 70727098758823347346317768322724523984682348539548870321631433152369211671597.
  * @dev Subscription ID can be changed in the HelperConfig.s.sol script.
  * @dev This contract is for educational purposes and should not be used in production.
- * @dev I would expect that anyone using this contract should have profound knowledge in smart contract develpoment..
+ * @dev I would expect that anyone using this project should have profound knowledge in smart contract develpoment..
  * @dev ..specifically in solidity and foundry
  */
 contract Raffle is VRFConsumerBaseV2Plus {
@@ -176,6 +176,10 @@ contract Raffle is VRFConsumerBaseV2Plus {
 
     function getRaffleState() external view returns(RaffleState) {
         return s_raffleState;
+    }
+
+    function getRaffleBalance() external view returns(uint256) {
+        return address(this).balance;
     }
 
     function getPlayer(uint256 indexOfPlayer) external view returns(address) {
